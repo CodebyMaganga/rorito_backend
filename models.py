@@ -62,8 +62,8 @@ class Cart_Item(db.Model):
     product_id = db.Column(db.Integer, db.ForeignKey('products.id'))
     customer_id = db.Column(db.Integer, db.ForeignKey('customers.id') )
 
-    cart_products = db.relationship('Product', backref='cartitems')
-    cart_customers = db.relationship('Customer', backref='cartitems')  
+    cart_products = db.relationship('Product', backref='cart_items')
+    cart_customers = db.relationship('Customer', backref='cart_items')  
 
 
 
