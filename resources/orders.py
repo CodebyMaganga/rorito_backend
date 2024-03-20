@@ -7,7 +7,8 @@ from schemas import  order_schema, orders_schema
 
 class Order_list(Resource):
     parser = reqparse.RequestParser()
-    parser.add_argument('Order_name', required=True, help="Order_name is required")
+    parser.add_argument('customer_id', required=True, help="customer_id is required")
+    parser.add_argument('product_id', required=True, help="product_id is required")
     # parser.add_argument('Order_employees', required=True, help="Order_employees is required")
 
     def get(self):

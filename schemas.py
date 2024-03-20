@@ -38,7 +38,7 @@ class CustomerSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Customer
         load_instance = True
-        fields = ('id', "first_name", "last_name", "phone_number", "email", "gender")
+        fields = ('id', "first_name", "last_name", "phone_number", "delivery_details")
 
     url = ma.Hyperlinks(
         {
@@ -77,7 +77,7 @@ class OrderSchema(ma.SQLAlchemyAutoSchema):
                 "first_name": customer.first_name,
                 "last_name": customer.last_name,
                 "phone_number": customer.phone_number,
-                "email": customer.email,
+                "delivery_details": customer.delivery_details,
                 
             }
         return None
@@ -118,7 +118,7 @@ class CartItemSchema(ma.SQLAlchemyAutoSchema):
                 "first_name": customer.first_name,
                 "last_name": customer.last_name,
                 "phone_number": customer.phone_number,
-                "email": customer.email,
+                "delivery_details": customer.delivery_details,
                 
             }
         return None
