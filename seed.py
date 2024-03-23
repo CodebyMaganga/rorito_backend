@@ -45,15 +45,15 @@ with app.app_context():
     # order5 = Order(product_id=7, customer_id=1, time_ordered=datetime.utcnow())
 
     # Create sample data for Cart Items
-    cart_item1 = Cart_Item(product_id=4, customer_id=2)
-    cart_item2 = Cart_Item(product_id=12, customer_id=1)
+    # cart_item1 = Cart_Item(product_id=4, customer_id=2)
+    # cart_item2 = Cart_Item(product_id=12, customer_id=1)
 
     # Add sample data to the session
     db.session.add_all([ product3, product4, product5, product6, product7,
                         product8, product9, product10, product11, product12, product13, product14, product15,
                         product16, product17, product18, product19, product20, product21, product22, product23, product24])
     # db.session.add_all([order1, order2, order3, order4, order5])
-    db.session.add_all([cart_item1, cart_item2])
+    # db.session.add_all([cart_item1, cart_item2])
 
 
     # Commit the session to persist the data

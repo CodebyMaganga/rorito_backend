@@ -16,7 +16,8 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///rorito.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://maganga:aQPsmnctOuL1uwuBn3vx0C8iiyvDm13q@dpg-cnt9su779t8c73ace1jg-a.frankfurt-postgres.render.com:5432/rorito'
+
 # os.environ.get('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
